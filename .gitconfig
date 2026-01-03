@@ -1,0 +1,19 @@
+[user]
+    name = Mustafa Adam
+    email = aweel017@gmail.com
+
+[color]
+    ui = auto
+
+[core]
+    editor = nvim
+    autocrlf = input
+
+[pull]
+    rebase = false
+
+[init]
+    defaultBranch = master
+
+[advice]
+    defaultBranch = false
