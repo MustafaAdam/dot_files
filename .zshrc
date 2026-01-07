@@ -70,7 +70,6 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gl='git log --oneline --graph --decorate'
-alias vim='nvim'
 
 # ===============================
 # Embedded aliases
@@ -98,11 +97,20 @@ newarduino() {
 # General aliases
 # ===============================
 
+alias vim='nvim'
+alias cls='clear'
+alias install='sudo apt install'
+alias remove='sudo apt remove'
+alias update='sudo apt update'
+alias autoremove='sudo apt autoremove'
+alias purge='sudo apt purge'
+
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 
 # ===============================
 # Safety
