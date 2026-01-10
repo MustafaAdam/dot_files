@@ -159,3 +159,17 @@ nnoremap <Tab> :bnext<CR>                    " Switch to next buffer
 nnoremap <S-Tab> :bprevious<CR>              " Switch to previous buffer
 
 tnoremap <Esc> <C-\><C-n>                    " ESC exits insert mode
+
+
+" ================================
+" Airline Settings
+" ================================
+
+" Airline minimal setup
+let g:airline#extensions#tabline#enabled = 0    " Disable top tabline; only use bottom statusline
+let g:airline_section_b = '%f'                  " Section B: show full file name
+let g:airline_section_c = '%{&filetype}'        " Section C: show file type (python, vim, text, etc.)
+let g:airline_section_x = '%m'                  " Section X: show modified flag ('+' if unsaved changes)
+let g:airline_section_y = ''                    " Section Y: left empty
+let g:airline_section_z = '%r'                  " Section Z: show read-only flag ('RO' if read-only)
+let g:airline_theme='gruvbox'                  " Set airline colorscheme to gruvbox

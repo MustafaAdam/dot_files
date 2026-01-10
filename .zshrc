@@ -41,13 +41,13 @@ autoload -Uz down-line-or-beginning-search
 # Bind arrow keys to search history from current prefix
 bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
 bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+
 # ===============================
 # Prompt (clean, informative)
 # ===============================
 
 autoload -Uz colors && colors
 PROMPT='%F{cyan}%n@%m%f %F{yellow}%~%f %# '
-
 # ===============================
 # Embedded / Toolchain Paths
 # ===============================
@@ -102,15 +102,9 @@ alias cls='clear'
 alias install='sudo apt install'
 alias remove='sudo apt remove'
 alias update='sudo apt update'
+alias upgrade='sudo apt upgrade'
 alias autoremove='sudo apt autoremove'
 alias purge='sudo apt purge'
-
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias ls='ls --color=auto --group-directories-first'
 
 # ===============================
 # Safety
@@ -125,9 +119,18 @@ setopt notify
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
+
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# ===============================
+# ===============================
+# ===============================
+
+# Force ls to use grouping and sorting (at the end to override an alias "ls='ls --color=tty'")
+alias ls='ls --color=auto --group-directories-first'
