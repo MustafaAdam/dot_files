@@ -1,0 +1,13 @@
+adb
+zsh
+btop
+git
+neovim
+guake
+tmux
+avr-libc
+gcc-avr
+avrdude
+binutils-avr
+gdb-avr
+simavr
