@@ -27,8 +27,8 @@ Plug 'junegunn/vim-easy-align'             " Column alignment tool
 Plug 'alvan/vim-closetag'                   " Auto-close HTML/XML tags
 Plug 'tpope/vim-abolish'                    " Search/replace and case coercion enhancements
 Plug 'Yggdroot/indentLine'                  " Vertical indentation guides
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " Fuzzy finder core
-Plug 'junegunn/fzf.vim'                     " FZF integration for Neovim
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " Fuzzy finder core
+"Plug 'junegunn/fzf.vim'                     " FZF integration for Neovim
 Plug 'chrisbra/Colorizer'                   " Highlight color codes in files
 Plug 'SirVer/ultisnips'                     " Snippet engine
 Plug 'honza/vim-snippets'                   " Predefined snippets for Ultisnips
@@ -108,19 +108,6 @@ let g:indentLine_color_gui = '#363949'
 let g:tagbar_width = 30
 let g:tagbar_iconchars = ['↠', '↡']
 
-" fzf-vim (fuzzy finder)
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit' }
-let g:fzf_colors =
-\ { 'fg': ['fg', 'Normal'], 'bg': ['bg', 'Normal'], 'hl': ['fg', 'Comment'],
-  \ 'fg+': ['fg', 'CursorLine', 'CursorColumn', 'Normal'], 'bg+': ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+': ['fg', 'Statement'], 'info': ['fg', 'Type'], 'border': ['fg', 'Ignore'],
-  \ 'prompt': ['fg', 'Character'], 'pointer': ['fg', 'Exception'], 'marker': ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'], 'header': ['fg', 'Comment'] }
-
-
 " Airline minimal setup
 
 " Let airline auto-handle sections
@@ -160,6 +147,8 @@ nnoremap <S-Tab> :bprevious<CR>              " Switch to previous buffer
 
 tnoremap <Esc> <C-\><C-n>                    " ESC exits insert mode
 
+" Paste yanked text below the current line, keep cursor in place
+nnoremap <leader>p :put<CR>
 
 " ================================
 " Airline Settings
@@ -172,4 +161,4 @@ let g:airline_section_c = '%{&filetype}'        " Section C: show file type (pyt
 let g:airline_section_x = '%m'                  " Section X: show modified flag ('+' if unsaved changes)
 let g:airline_section_y = ''                    " Section Y: left empty
 let g:airline_section_z = '%r'                  " Section Z: show read-only flag ('RO' if read-only)
-let g:airline_theme='gruvbox'                  " Set airline colorscheme to gruvbox
+let g:airline_theme='dark'                  " Set airline colorscheme to gruvbox
