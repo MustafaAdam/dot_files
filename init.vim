@@ -27,8 +27,6 @@ Plug 'junegunn/vim-easy-align'             " Column alignment tool
 Plug 'alvan/vim-closetag'                   " Auto-close HTML/XML tags
 Plug 'tpope/vim-abolish'                    " Search/replace and case coercion enhancements
 Plug 'Yggdroot/indentLine'                  " Vertical indentation guides
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }   " Fuzzy finder core
-"Plug 'junegunn/fzf.vim'                     " FZF integration for Neovim
 Plug 'chrisbra/Colorizer'                   " Highlight color codes in files
 Plug 'SirVer/ultisnips'                     " Snippet engine
 Plug 'honza/vim-snippets'                   " Predefined snippets for Ultisnips
