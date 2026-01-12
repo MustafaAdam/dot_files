@@ -124,10 +124,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
 # ===============================
 # ===============================
 # ===============================
@@ -135,6 +131,5 @@ source $ZSH/oh-my-zsh.sh
 # Force ls to use grouping and sorting (at the end to override an alias "ls='ls --color=tty'")
 alias ls='ls --color=auto --group-directories-first'
 
-
+# man now use neovim
 export MANPAGER='nvim +Man!'
-export PAGER='nvim -'
