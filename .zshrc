@@ -65,11 +65,11 @@ PROMPT='%F{cyan}%n@%m%f %F{yellow}%~%f %# '
 # Git (keep it simple)
 # ===============================
 
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gp='git push'
-alias gl='git log --oneline --graph --decorate'
+alias gits='git status'
+alias gita='git add'
+alias gitc='git commit'
+alias gitp='git push'
+alias gitl='git log --oneline --graph --decorate'
 
 # ===============================
 # Embedded aliases
@@ -135,6 +135,9 @@ alias ls='ls --color=auto --group-directories-first'
 export MANPAGER='nvim +Man!'
 
 
+# ================================ Flutter SDK ========================================
+export PATH="$HOME/flutter/bin:$PATH"
+
 # ================================ ANDROID sdk for flutter ========================================
 # export android_sdk_root=$home/android
 # export path=$path:$android_sdk_root/cmdline-tools/latest/bin
@@ -143,4 +146,7 @@ export MANPAGER='nvim +Man!'
 # reference android script for environment variables
 [ -f "$HOME/.config/env/android.sh" ] && source "$HOME/.config/env/android.sh"
 
-
+# ================================ openjdk 11 ========================================
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH:$PATH
+ 
