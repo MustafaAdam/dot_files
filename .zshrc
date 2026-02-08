@@ -133,3 +133,14 @@ alias ls='ls --color=auto --group-directories-first'
 
 # man now use neovim
 export MANPAGER='nvim +Man!'
+
+
+# ================================ ANDROID sdk for flutter ========================================
+# export android_sdk_root=$home/android
+# export path=$path:$android_sdk_root/cmdline-tools/latest/bin
+# export path=$path:$android_sdk_root/platform-tools
+
+# reference android script for environment variables
+[ -f "$HOME/.config/env/android.sh" ] && source "$HOME/.config/env/android.sh"
+
+
