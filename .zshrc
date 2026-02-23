@@ -139,14 +139,12 @@ export MANPAGER='nvim +Man!'
 export PATH="$HOME/flutter/bin:$PATH"
 
 # ================================ ANDROID sdk for flutter ========================================
-# export android_sdk_root=$home/android
-# export path=$path:$android_sdk_root/cmdline-tools/latest/bin
-# export path=$path:$android_sdk_root/platform-tools
 
-# reference android script for environment variables
-[ -f "$HOME/.config/env/android.sh" ] && source "$HOME/.config/env/android.sh"
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export ANDROID_HOME="$ANDROID_SDK_ROOT"
+export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
 
-# ================================ openjdk 11 ========================================
+# ================================ openjdk 17 ========================================
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-export PATH=$JAVA_HOME/bin:$PATH:$PATH
+export PATH="$JAVA_HOME/bin:$PATH"
  
