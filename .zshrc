@@ -100,6 +100,7 @@ newarduino() {
 alias vim='nvim'
 alias cls='clear'
 alias install='sudo apt install'
+alias search='sudo apt search'
 alias remove='sudo apt remove'
 alias update='sudo apt update'
 alias upgrade='sudo apt upgrade'
