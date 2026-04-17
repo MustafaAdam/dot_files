@@ -6,5 +6,6 @@ neovim
 guake
 tmux
 firebase
+gcloud
 npm
 zellij

@@ -538,3 +538,21 @@ web_client {
 
 // copy to clipboard
 copy_command "xclip -selection clipboard"
+
+themes {
+  gruvbox-dark {
+    fg "#ebdbb2"
+    bg "#282828"
+    black "#1d2021"
+    red "#fb4934"
+    green "#b8bb26"
+    yellow "#fabd2f"
+    blue "#83a598"
+    magenta "#d3869b"
+    cyan "#8ec07c"
+    white "#a89984"
+    orange "#fe8019"
+  }
+}
+
+theme "tokyo-night"
