@@ -6,6 +6,8 @@ neovim
 guake
 tmux
 firebase
+flutterfire
 gcloud
 npm
 zellij
+python3 rembg 
