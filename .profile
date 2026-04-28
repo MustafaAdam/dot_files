@@ -25,11 +25,3 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
-# Add snap binaries to PATH
-export PATH=$PATH:/snap/bin
-
-# ================================ ANDROID sdk for flutter ========================================
-
-# reference android script for environment variables
-[ -f "$HOME/.config/env/android.sh" ] && source "$HOME/.config/env/android.sh"
