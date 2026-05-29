@@ -106,6 +106,7 @@ alias update='sudo apt update'
 alias upgrade='sudo apt upgrade'
 alias autoremove='sudo apt autoremove'
 alias purge='sudo apt purge'
+alias zell='zellij --layout ~/.config/zellij/layouts/two-pane.kdl'
 
 # ===============================
 # Safety
