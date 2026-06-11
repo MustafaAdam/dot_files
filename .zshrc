@@ -97,7 +97,7 @@ newarduino() {
 # General aliases
 # ===============================
 
-alias vim='nvim'
+alias v='nvim'
 alias cls='clear'
 alias install='sudo apt install'
 alias search='sudo apt search'
@@ -155,3 +155,25 @@ export PATH="$PATH:$HOME/.pub-cache/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# ---- Hisab Firebase env (dev/prod via dart-define) ----
+export HISAB_DIR="$HOME/Documents/projects/hisab"
+alias hisab-cd='cd "$HISAB_DIR"'
+
+# Run dev Firebase (debug)
+alias hisab-dev='(cd "$HISAB_DIR" && flutter run --dart-define=FIREBASE_ENV=dev)'
+
+# Run prod Firebase (debug)
+alias hisab-prod='(cd "$HISAB_DIR" && flutter run --dart-define=FIREBASE_ENV=prod)'
+
+# Build prod release bundle
+alias hisab-release='(cd "$HISAB_DIR" && flutter build appbundle --release --dart-define=FIREBASE_ENV=prod)'
+
+# Uninstall app (run BEFORE switching dev<->prod on a device)
+alias hisab-uninstall='adb uninstall com.app.hisab'
+
+# Convenience: uninstall then run fresh
+alias hisab-dev-fresh='adb uninstall com.app.hisab; (cd "$HISAB_DIR" && flutter run --dart-define=FIREBASE_ENV=dev)'
+alias hisab-prod-fresh='adb uninstall com.app.hisab; (cd "$HISAB_DIR" && flutter run --dart-define=FIREBASE_ENV=prod)'
+# ---- end Hisab Firebase env ----
