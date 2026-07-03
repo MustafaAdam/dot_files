@@ -71,27 +71,6 @@ alias gitc='git commit'
 alias gitp='git push'
 alias gitl='git log --oneline --graph --decorate'
 
-# ===============================
-# Embedded aliases
-# ===============================
-
-alias m='make'
-alias mb='make build'
-alias mf='make flash'
-alias mu='make upload'
-alias mm='make monitor'
-alias mc='make clean'
-
-alias ardb='arduino-cli board list'
-alias ardc='arduino-cli compile'
-alias ardu='arduino-cli upload'
-
-# New project from template (newarduino project_name)
-newarduino() {
-    local name="${1:-arduino-project}"
-    [[ -e "$name" ]] && { echo "❌ $name already exists"; return 1; }
-    cp -r ~/arduino-template "$name"
-}
 
 # ===============================
 # General aliases
@@ -107,6 +86,13 @@ alias upgrade='sudo apt upgrade'
 alias autoremove='sudo apt autoremove'
 alias purge='sudo apt purge'
 alias zell='zellij --layout ~/.config/zellij/layouts/two-pane.kdl'
+
+# mkdir + cd
+mcd() {
+  mkdir -p "$1" && cd "$1"
+}
+
+
 
 # ===============================
 # Safety
