@@ -150,6 +150,10 @@ alias hisab-cd='cd "$HISAB_DIR"'
 # Run dev Firebase (debug)
 alias hisab-dev='(cd "$HISAB_DIR" && flutter run --dart-define=FIREBASE_ENV=dev)'
 
+# Run dev Firebase (release)
+alias hisab-dev-release='(cd "$HISAB_DIR" && flutter run --release --dart-define=FIREBASE_ENV=dev)'
+
+
 # Run prod Firebase (debug)
 alias hisab-prod='(cd "$HISAB_DIR" && flutter run --dart-define=FIREBASE_ENV=prod)'
 
